@@ -1,0 +1,86 @@
+# %%writefile task.yml
+# task.yml
+scenarios:
+  - name: "Toy Car vs Real Car"
+    prediction:
+      time: "January 1, 2024"
+      location: "the Louvre"
+      subject: "a toy car"
+      action: "collide"
+      object: "the Louvre"
+    actual:
+      time: "April 10, 2024"
+      location: "Eiffel Tower, Paris"
+      subject: "a real car"
+      action: "crash"
+      object: "Eiffel Tower"
+
+  - name: "Month Accuracy Test"
+    prediction:
+      time: "in April 2024"
+      location: "Paris"
+      subject: "a vehicle"
+      action: "bump into"
+      object: "a monument"
+    actual:
+      time: "April 10, 2024"
+      location: "Eiffel Tower, Paris"
+      subject: "a car"
+      action: "collide with"
+      object: "Eiffel Tower"
+
+  - name: "Same Country Different City"
+    prediction:
+      time: "in 2024"
+      location: "Lyon, France"
+      subject: "a truck"
+      action: "accident"
+      object: "building"
+    actual:
+      time: "April 10, 2024"
+      location: "Paris, France"
+      subject: "a car"
+      action: "collision"
+      object: "monument"
+
+  - name: "Perfect Match"
+    prediction:
+      time: "April 10, 2024"
+      location: "Eiffel Tower, Paris"
+      subject: "a car"
+      action: "collide"
+      object: "the Eiffel Tower"
+    actual:
+      time: "April 10, 2024"
+      location: "Eiffel Tower, Paris"
+      subject: "a red Toyota Camry"
+      action: "collide"
+      object: "Eiffel Tower"
+
+  - name: "Vague but Correct"
+    prediction:
+      time: "in 2024"
+      location: "Parisian monument"
+      subject: "vehicle"
+      action: "traffic incident"
+      object: "landmark"
+    actual:
+      time: "April 10, 2024"
+      location: "Eiffel Tower, Paris"
+      subject: "car"
+      action: "crash"
+      object: "Eiffel Tower"
+
+   - name: "Utterly Off"
+    prediction:
+      time: "in 2020"
+      location: "Corn Park"
+      subject: "balloon"
+      action: "lost and found"
+      object: "object misplacement"
+    actual:
+      time: "April 10, 2024"
+      location: "Eiffel Tower, Paris"
+      subject: "buffalo"
+      action: "escape"
+      object: "animal"     
